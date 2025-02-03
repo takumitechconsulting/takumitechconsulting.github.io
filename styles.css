@@ -5,7 +5,7 @@ header {
     font-size: 2.2rem;
     text-align: center;
     margin: 0;
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding */
 }
 
 body {
@@ -15,10 +15,11 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents unwanted scrolling */
 }
 
 .container {
@@ -26,15 +27,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 90vh; /* Adjusted to prevent scrolling */
-    padding: 10px;
+    min-height: 85vh; /* Reducing min-height to prevent mobile scrolling */
+    padding: 0 20px;
+    flex-grow: 1; /* Ensures footer doesn't push content */
 }
 
-/* Moves text higher on mobile screens */
+/* Reduce top spacing on mobile */
 @media (max-width: 768px) {
     .container {
-        min-height: 85vh; /* Reduces extra space at the top */
-        padding-top: 10vh; /* Moves content slightly higher */
+        min-height: 80vh; /* Further reduces height */
+        padding-top: 5vh; /* Moves content up */
+    }
+
+    header {
+        font-size: 2rem; /* Slightly smaller kanji */
+        padding: 3px 0; /* Less vertical space */
     }
 }
 
@@ -60,7 +67,7 @@ body {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.8rem;
     opacity: 0.7;
 }
