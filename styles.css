@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
     overflow: hidden; /* Prevents unwanted scrolling */
 }
 
@@ -36,7 +35,6 @@ body {
 @media (max-width: 768px) {
     .container {
         min-height: 80vh; /* Further reduces height */
-        padding-top: 5vh; /* Moves content up */
     }
 
     header {
